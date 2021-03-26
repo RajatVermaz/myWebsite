@@ -14,9 +14,8 @@ const Calculate = () => {
   const CalculateBudget = () => {
     let tolaValue = rate * tola;
     let annaValue = (rate / 16) * aana;
-    let rattiValue = (rate / 16 / 6) * ratti;
-    let chargeValue = parseInt(charge);
-    let total = tolaValue + annaValue + rattiValue + chargeValue;
+    let rattiValue = (rate / 16 / 6) * ratti;    
+    let total = tolaValue + annaValue + rattiValue + parseInt(charge);
     return total;
   };
   
