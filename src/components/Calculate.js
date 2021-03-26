@@ -15,24 +15,15 @@ const Calculate = () => {
     let tolaValue = rate * tola;
     let annaValue = (rate / 16) * aana;
     let rattiValue = (rate / 16 / 6) * ratti;
-    let chargeValue = charge;
+    let chargeValue = parseInt(charge);
     let total = tolaValue + annaValue + rattiValue + chargeValue;
     return total;
   };
-  // const getDate = () => {
-  //   return new Date().toLocaleDateString();
-  // };
-  // const getTime = () => {
-  //   return new Date().toLocaleTimeString();
-  // };
+  
 
   return (
     <>
-      {/* <div className="dateTime">
-        <h2>
-          {getDate()} <span>{getTime()}</span>
-        </h2>
-      </div> */}
+      
       <div className="heading">
         <h2>
           <RiBankLine /> Check Your Budget <RiBankLine />
@@ -107,7 +98,7 @@ const Calculate = () => {
           />
 
           <h1>{CalculateBudget()}</h1>
-          <button onClick={CalculateBudget()}>Clear Entry</button>
+          
         </form>
       </div>
       <div className="info">
