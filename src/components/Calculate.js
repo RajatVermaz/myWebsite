@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Calculate.css";
 import { RiBankFill, RiBankLine } from "react-icons/ri";
-// import { FcLibrary } from "react-icons/f c";
+
 const Calculate = () => {
   // e.preventDefault();
   const [rate, setRate] = useState("");
@@ -9,30 +9,18 @@ const Calculate = () => {
   const [tola, setTola] = useState("");
   const [aana, setAana] = useState("");
   const [ratti, setRatti] = useState("");
-  const [total, setTotal] = useState("");
 
   const CalculateBudget = () => {
     let tolaValue = rate * tola;
     let annaValue = (rate / 16) * aana;
     let rattiValue = (rate / 16 / 6) * ratti;
-    let chargeValue = charge;
+    let chargeValue = parseInt(charge) || 0;
     let total = tolaValue + annaValue + rattiValue + chargeValue;
     return total;
   };
-  // const getDate = () => {
-  //   return new Date().toLocaleDateString();
-  // };
-  // const getTime = () => {
-  //   return new Date().toLocaleTimeString();
-  // };
 
   return (
     <>
-      {/* <div className="dateTime">
-        <h2>
-          {getDate()} <span>{getTime()}</span>
-        </h2>
-      </div> */}
       <div className="heading">
         <h2>
           <RiBankLine /> Check Your Budget <RiBankLine />
@@ -44,7 +32,7 @@ const Calculate = () => {
             <p>Display Rate : {rate}</p>
           </div>
           <div className="inner-dis">
-            <p>Display Charge : {charge}</p>
+            <p>Display Labour Charge : {charge}</p>
           </div>
           <div className="inner-dis">
             <p>Display Weight in Tola : {tola}</p>
@@ -56,16 +44,9 @@ const Calculate = () => {
             <p>Display Weight in Ratti: {ratti}</p>
           </div>
           <div className="inner-dis">
-            <h2
-              style={{
-                backgroundColor: "rgb(211, 176, 130)",
-                color: "white",
-                borderRadius: "5px",
-                padding: "0.2em",
-              }}
-            >
+            <h2>
               Total Expense: {CalculateBudget()}
-              <span style={{ color: "Green" }}> Rupees</span>
+              <span style={{ color: "#00005f" }}> Rs</span>
             </h2>
           </div>
         </div>
@@ -77,13 +58,7 @@ const Calculate = () => {
             onChange={(event) => setRate(event.target.value)}
             placeholder="Enter Rate"
           />
-          <label>Charge</label>
-          <input
-            type="number"
-            value={charge}
-            onChange={(event) => setCharge(event.target.value)}
-            placeholder="Enter Charge"
-          />
+
           <label>Tola</label>
           <input
             type="number"
@@ -105,15 +80,29 @@ const Calculate = () => {
             onChange={(event) => setRatti(event.target.value)}
             placeholder="Enter weight in ratti"
           />
-
-          <h1>{CalculateBudget()}</h1>
-          <button onClick={CalculateBudget()}>Clear Entry</button>
+          <label>Labour Charge</label>
+          <input
+            type="number"
+            value={charge}
+            onChange={(event) => setCharge(event.target.value)}
+            placeholder="Enter Charge"
+          />
+          <h2>Total: {CalculateBudget()} Rs</h2>
         </form>
       </div>
       <div className="info">
         <p>
           यहाँ आप अपने बजट की जाँच कर सकते हैं, खरीदने के लिए सोने का वजन डालकर।
         </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+          magni quis amet nesciunt repellat aut iste alias ipsa odit animi
+          aliquam corporis, libero quam? Quaerat, ab? Sunt, doloremque. Libero,
+          saepe.
+        </p>
+      </div>
+      <div className="image">
+        <img src="../assets/phonchi.jpg" rel="demo" />
       </div>
     </>
   );

@@ -1,9 +1,9 @@
 import React from "react";
-import Calculate from "../Calculate";
+
 const Home = () => {
   return (
     <>
-      <Calculate />
+      <div className="container">Home</div>
     </>
   );
 };
