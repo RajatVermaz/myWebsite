@@ -13,6 +13,7 @@ const Calculate = () => {
   const CalculateBudget = () => {
     let tolaValue = rate * tola;
     let annaValue = (rate / 16) * aana;
+<<<<<<< HEAD
     let rattiValue = (rate / 16 / 6) * ratti;
     let chargeValue = parseInt(charge) || 0;
     let total = tolaValue + annaValue + rattiValue + chargeValue;
@@ -21,6 +22,17 @@ const Calculate = () => {
 
   return (
     <>
+=======
+    let rattiValue = (rate / 16 / 6) * ratti;    
+    let total = tolaValue + annaValue + rattiValue + parseInt(charge);
+    return total;
+  };
+  
+
+  return (
+    <>
+      
+>>>>>>> 747b5a3e155a5c158c33cb42cf52a17b376876a9
       <div className="heading">
         <h2>
           <RiBankLine /> Check Your Budget <RiBankLine />
@@ -80,6 +92,7 @@ const Calculate = () => {
             onChange={(event) => setRatti(event.target.value)}
             placeholder="Enter weight in ratti"
           />
+<<<<<<< HEAD
           <label>Labour Charge</label>
           <input
             type="number"
@@ -88,6 +101,11 @@ const Calculate = () => {
             placeholder="Enter Charge"
           />
           <h2>Total: {CalculateBudget()} Rs</h2>
+=======
+
+          <h1>{CalculateBudget()}</h1>
+          
+>>>>>>> 747b5a3e155a5c158c33cb42cf52a17b376876a9
         </form>
       </div>
       <div className="info">
