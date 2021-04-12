@@ -95,10 +95,9 @@ const Calculate = () => {
           यहाँ आप अपने बजट की जाँच कर सकते हैं, खरीदने के लिए सोने का वजन डालकर।
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          magni quis amet nesciunt repellat aut iste alias ipsa odit animi
-          aliquam corporis, libero quam? Quaerat, ab? Sunt, doloremque. Libero,
-          saepe.
+          Shopping jewellery is an experience like no other. The state of the art present in our products is remarkable.
+          We charge only for the actual weigth of gold, after subtracting the weight of stones from the total weight.
+          You are never charged the price of gold for the weight of stones. 
         </p>
       </div>
       <div className="image">
